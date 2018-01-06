@@ -12,7 +12,6 @@ header{
   color:#ffffff;
   padding:15px;
   margin-bottom: -80px;
-
 }
 
 header nav{
@@ -38,7 +37,6 @@ header nav li a{
 }
 header nav li a:hover{
   color:#a2cf8d;
-
 }
 
 textarea {
@@ -217,7 +215,6 @@ header a.logo{
   width: 100%;
 }
 
-
 .blog .sm-box1 h4,
 .blog .sm-box1 p,
 .blog .sm-box2 h4,
@@ -241,11 +238,11 @@ header a.logo{
 .blog .sm-box-text{
   text-align: justify;
   position: absolute;
-  background-color: rgba(250, 250, 250, 0.5);
-  bottom: 1.8%;
+  background-color: rgba(250, 250, 250, 0.6);
+  bottom: 4px;
   font-size: 18px;
-  padding: 10px 0 11px 0;
-  width: 100%
+  padding: 10px 0 10px 0;
+  width: 100%;
 }
 
 .contact-us{
@@ -468,7 +465,6 @@ margin-top: 65px;
   .blog .sm-box2 h4,
   .blog .sm-box2 p{
     padding: 0;
-
   }
   .grey-blocks .grey-box{
     margin-left: 5%;
@@ -495,7 +491,7 @@ margin-top: 65px;
 
   .offers .offers-pictures img{
     width: 110%;
-    margin: 0;
+    margin-left: -5%;
   }
 
   .col-3.imgBox{
@@ -543,13 +539,16 @@ margin-top: 65px;
     margin-bottom: 4%;
   }
   .portfolio .portfolio-pictures img{
-    width: 65%;
+    width: 55%;
     margin: 0;
     padding:0;
   }
 }
 @media screen and (max-width:550px) {
 
+  .blog .lg-box{
+    margin-top: -20%;
+  }
   .contact-us .contact-us-map img{
     width: 105%;
     padding: 5px;
@@ -560,9 +559,23 @@ margin-top: 65px;
   }
 
   .offers .offers-pictures img{
-    width: 110%;
+    width: 120%;
+    margin-left: -10%;
   }
-  .blog h2.title{
-    margin-bottom: 15%;
+
+  .portfolio .portfolio-pictures img{
+    width: 65%;
+  }
+
+  .blog .lg-box{
+    margin-top: 0;
+  }
+
+  .blog .lg-box .lg-box-text{
+    font-size: 12px;
+
+  }
+  .blog .sm-box-text{
+    font-size: 12px;
   }
 }
