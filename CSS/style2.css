@@ -10,19 +10,34 @@ body{
 
 header{
   color:#ffffff;
-  padding:15px;
+  padding:0;
   margin-bottom: -80px;
 }
 
-header nav{
+.navBar{
   float:right;
   overflow: hidden;
-  margin-top: -35px;
+  color:#FFF;
+  /*margin-top: -35px;*/
+}
+.white-navBar{
+  float:right;
+  overflow: hidden;
+  background-color:red;
+  color: #000;
 }
 
-header nav ul{
-  margin-right: 30px;
+.white-li{
+  color: #000;
 }
+.black-li{
+  color: #000;
+}
+
+
+/*header nav ul{
+  margin-right: 30px;
+}*/
 
 header li{
   display: inline;
@@ -45,7 +60,8 @@ textarea {
 }
 
 #menu{
-  margin-top: -35px;
+  /*margin-top: -35px;*/
+  margin-right: 25px;
   display: none;
   float: right;
   background-color:#a2cf8d;
@@ -69,6 +85,30 @@ textarea {
 .green-button:hover{
   background-color:#61a244;
 }
+
+.to-up-btn{
+  background-color: #a2cf8d;
+  padding: 10px;
+  border-radius: 50%;
+  color:#ffffff;
+  border:none;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 1px 10px #000;
+  transition-duration: 0.2s;
+  z-index: 99;
+
+}
+.to-up-btn:hover{
+  background-color:#61a244;
+}
+
+.upBtn{
+    text-align: right;
+    margin-right: 2%;
+
+
+}
 .white-button{
   background-color: #ffffff;
   padding: 10px 20px 10px 20px;
@@ -83,16 +123,21 @@ textarea {
   color: #a2cf8d;
 }
 
-header a.logo{
+header .logo img{
   margin-left: 30px;
+  margin-bottom: -35px;
 }
 
 .showcase{
   color: #ffffff;
   background:url(../img/slide_02.jpg)no-repeat;
   text-align: center;
-  padding-bottom: 10px;
+  /*padding-bottom: 12%;*/
   white-space:pre-wrap;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .showcase-main-text{
@@ -426,14 +471,20 @@ margin-top: 65px;
 }
 
 @media screen and (max-width:799px) {
+   header{
+     padding: 0;
+   }
   header nav ul li{
     display: block;
+    padding: 0;
     text-align: center;
     margin-bottom: 2%;
   }
+
     header nav {
       display: none;
       margin: 0;
+      padding: 0;
       text-align: center;
       width: 100%;
       background-color: rgba(250, 250, 250, 0.2);
@@ -441,13 +492,11 @@ margin-top: 65px;
   #menu{
     display: block;
   }
-
+/* Js dropdown menu */
   .navBar.responsiveNavbar{
     display: block;
-    margin: 0;
     text-align: center;
-    width: 100%;
-    background-color: rgba(250, 250, 250, 0.2);
+    background-color: rgba(162, 207, 141, 0.7);
   }
   .col-3.services-box{
     width: 100%;
