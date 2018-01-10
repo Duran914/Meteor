@@ -8,51 +8,54 @@ body{
   font-family:'Inconsolata', 'Montserrat' monospace, sans-serif;
 }
 
-header{
-  color:#ffffff;
-  padding:0;
-  margin-bottom: -80px;
+.hr-line{
+  border-color: #000;
+  display: none;
 }
 
 .navBar{
-  float:right;
   overflow: hidden;
-  color:#FFF;
-  /*margin-top: -35px;*/
-}
-.white-navBar{
-  float:right;
-  overflow: hidden;
-  background-color:red;
-  color: #000;
+  background-color: #a2cf8d;
 }
 
-.white-li{
-  color: #000;
-}
-.black-li{
-  color: #000;
+.navBar ul{
+  float: right;
 }
 
+.navBar .logo img{
+  float: left;
+  margin: 5px 5px;
+}
 
-/*header nav ul{
-  margin-right: 30px;
-}*/
-
-header li{
+.navBar li{
   display: inline;
   padding: 0 20px;
 }
 
-header nav li a{
+.navBar li a{
+
+}
+
+.white-link{
   color: #ffffff;
   text-decoration: none;
   font-size: 15px;
   text-decoration: none;
   transition-duration: 0.4s;
 }
-header nav li a:hover{
+.white-link:hover{
   color:#a2cf8d;
+}
+
+.black-link{
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+.black-link:hover{
+  color: #fff;
 }
 
 textarea {
@@ -60,13 +63,9 @@ textarea {
 }
 
 #menu{
-  /*margin-top: -35px;*/
   margin-right: 25px;
   display: none;
   float: right;
-  background-color:#a2cf8d;
-  padding: 3px 8px;
-  border-radius: 5px;
   cursor: pointer;
   /*transition-duration: 0.4s*/
 }
@@ -121,11 +120,6 @@ textarea {
 }
 .white-button:hover{
   color: #a2cf8d;
-}
-
-header .logo img{
-  margin-left: 30px;
-  margin-bottom: -35px;
 }
 
 .showcase{
@@ -471,33 +465,31 @@ margin-top: 65px;
 }
 
 @media screen and (max-width:799px) {
-   header{
-     padding: 0;
-   }
-  header nav ul li{
+  .hr-line{
     display: block;
-    padding: 0;
+  }
+  .navBar ul li{
+    display: block;
     text-align: center;
     margin-bottom: 2%;
   }
 
-    header nav {
+  .navBar ul {
       display: none;
+      width: 100%;
       margin: 0;
       padding: 0;
-      text-align: center;
-      width: 100%;
-      background-color: rgba(250, 250, 250, 0.2);
     }
   #menu{
     display: block;
+    margin-top: 5px;
   }
 /* Js dropdown menu */
   .navBar.responsiveNavbar{
     display: block;
     text-align: center;
-    background-color: rgba(162, 207, 141, 0.7);
   }
+
   .col-3.services-box{
     width: 100%;
     float: none;

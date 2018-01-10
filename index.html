@@ -8,20 +8,32 @@
     <title>Meteor</title>
   </head>
   <body>
-    <header>
-        <a class="logo" href="index.html">
-          <img src="img/white_logo.png" alt="Meteor">
-        </a>
-        <div class="toggle">
-        <i class="fa fa-bars fa-2x" id="menu" onclick="dropdownClick()" aria-hidden="true"></i>
-       </div>
-        <nav class="navBar" id="dropDownMenu">
-          <ul>
-            <li><a href="home.html">HOME</a></li>
-            <li><a href="About_us.html">ABOUT US</a></li>
-            <li><a href="Portfolio.html">PORTFOLIO</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="contact_us.html">CONTACT US</a></li>
+    <header class="nav-head">
+          <nav class="navBar">
+            <a class="logo" href="index.html">
+            <img src="img/black_logo.png" alt="Meteor"></a>
+            <i class="fa fa-bars fa-2x" id="menu" onclick="dropdownClick()" aria-hidden="true"></i>
+          <ul id="dropDownMenu">
+            <hr class="hr-line">
+
+            <li><a class="black-link" id="homeLink" href="home.html">HOME
+            <i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <hr class="hr-line">
+
+            <li><a class="black-link" id="aboutLink" href="About_us.html">ABOUT US
+            <i class="fa fa-users" aria-hidden="true"></i></a></li>
+            <hr class="hr-line">
+
+            <li><a class="black-link" id="portfolioLink" href="Portfolio.html">PORTFOLIO
+            <i class="fa fa-book" aria-hidden="true"></i></a></li>
+            <hr class="hr-line">
+
+            <li><a class="black-link" id="blogLink" href="blog.html">BLOG
+            <i class="fa fa-comments" aria-hidden="true"></i></a></li>
+            <hr class="hr-line">
+
+            <li><a class="black-link" id="contactLink" href="contact_us.html">CONTACT US
+            <i class="fa fa-envelope" aria-hidden="true"></i></a></li>
           </ul>
       </nav>
     </header>
