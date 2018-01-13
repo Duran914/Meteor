@@ -5,57 +5,44 @@ body{
   background-color: #e6e6e6;
   margin:0;
   padding:0;
-  font-family:'Inconsolata', 'Montserrat' monospace, sans-serif;
+  font-family:'Montserrat','Inconsolata';
 }
 
 .hr-line{
-  border-color: #000;
+  border-color:  #61a244;
   display: none;
+  border-style: solid;
 }
 
-.navBar{
+.nav-bar{
   overflow: hidden;
   background-color: #a2cf8d;
 }
 
-.navBar ul{
+.nav-bar ul{
+  list-style-type: none;
+  margin: 0;
   float: right;
 }
 
-.navBar .logo img{
+.nav-bar .logo img{
   float: left;
   margin: 5px 5px;
 }
-
-.navBar li{
+.nav-bar li{
   display: inline;
-  padding: 0 20px;
 }
 
-.navBar li a{
-
-}
-
-.white-link{
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 15px;
-  text-decoration: none;
-  transition-duration: 0.4s;
-}
-.white-link:hover{
-  color:#a2cf8d;
-}
-
-.black-link{
+.nav-bar li .green-navBar{
+  display: inline-block;
   color: #000;
+  text-align: center;
+  padding: 12px 10px;
   text-decoration: none;
-  font-size: 15px;
-  text-decoration: none;
-  transition-duration: 0.4s;
 }
-.black-link:hover{
-  color: #fff;
+
+.nav-bar li .green-navBar:hover{
+background-color: #61a244;
 }
 
 textarea {
@@ -86,6 +73,7 @@ textarea {
 }
 
 .to-up-btn{
+  display: none;
   background-color: #a2cf8d;
   padding: 10px;
   border-radius: 50%;
@@ -105,8 +93,6 @@ textarea {
 .upBtn{
     text-align: right;
     margin-right: 2%;
-
-
 }
 .white-button{
   background-color: #ffffff;
@@ -126,20 +112,23 @@ textarea {
   color: #ffffff;
   background:url(../img/slide_02.jpg)no-repeat;
   text-align: center;
-  /*padding-bottom: 12%;*/
-  white-space:pre-wrap;
+  padding-bottom: 10%;
+  background-size: cover;
+  /* paralax effect*/
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .showcase-main-text{
   font-size: 30px;
-  margin-top: -20px;
-  margin-bottom: -20px;
 }
 
+.showcase-text{
+  text-align: center;
+  padding: 0;
+  margin: 10%;
+}
 .services .box{
     text-align: center;
     float: left;
@@ -147,12 +136,13 @@ textarea {
     padding:25px 5px 25px 5px;
     border-radius: 5px;
     background-color: #ffffff;
-    box-shadow:5px 5px 8px #b3b3b3;
+    box-shadow:0px 0px 10px #b3b3b3;
 }
 
 .offers{
   background:url(../img/what-we-do-bg.png)no-repeat;
   overflow: hidden;
+  background-size: cover;
 }
 
 .offers .offers-text{
@@ -170,7 +160,6 @@ textarea {
 }
 
 .offers .offers-pictures{
-  /*width: 500px;*/
   padding-left: 20%;
   margin-right: 20%;
 }
@@ -344,7 +333,7 @@ margin-top: 65px;
   width: 225px;
   border-radius: 5px;
   background-color: #ffffff;
-  box-shadow:5px 5px 8px #b3b3b3;
+  box-shadow:0px 0px 10px #b3b3b3;
 }
 
 .grey-blocks .container .grey-box h3.number{
@@ -466,23 +455,35 @@ margin-top: 65px;
 
 @media screen and (max-width:799px) {
   .hr-line{
-    display: block;
+    display:block;
+    margin: 0;
   }
-  .navBar ul li{
-    display: block;
-    text-align: center;
-    margin-bottom: 2%;
+  .nav-bar{
+    padding: 5px;
   }
 
-  .navBar ul {
+  .nav-bar ul {
       display: none;
       width: 100%;
       margin: 0;
       padding: 0;
+      /*position: relative;*/
     }
+
+    .nav-bar ul li{
+      display: block;
+      text-align: center;
+    }
+    .nav-bar li a{
+      display: block;
+      padding: 14px 16px;
+      text-decoration: none;
+      width: 100%;
+    }
+
   #menu{
     display: block;
-    margin-top: 5px;
+    margin-top: 8px;
   }
 /* Js dropdown menu */
   .navBar.responsiveNavbar{

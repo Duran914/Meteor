@@ -9,51 +9,48 @@
   </head>
   <body>
     <header class="nav-head">
-          <nav class="navBar">
-            <a class="logo" href="index.html">
-            <img src="img/black_logo.png" alt="Meteor"></a>
-            <i class="fa fa-bars fa-2x" id="menu" onclick="dropdownClick()" aria-hidden="true"></i>
-          <ul id="dropDownMenu">
+      <nav class="nav-bar">
+        <a class="logo" href="index.html">
+          <img src="img/black_logo.png" alt="Meteor"></a>
+          <i class="fa fa-bars fa-2x" id="menu" onclick="dropdownClick()" aria-hidden="true"></i>
+          <ul id="dropDownMenu" class="navBar">
             <hr class="hr-line">
+            <li><a class="green-navBar" id="homeLink" href="#">HOME
+              <i class="fa fa-home" aria-hidden="true"></i></a></li>
+              <hr class="hr-line">
+              <li><a class="green-navBar" id="aboutLink" href="About_us.html">ABOUT US
+                <i class="fa fa-users" aria-hidden="true"></i></a></li>
+                <hr class="hr-line">
+                <li><a class="green-navBar" id="portfolioLink" href="Portfolio.html">PORTFOLIO
+                  <i class="fa fa-book" aria-hidden="true"></i></a></li>
+                  <hr class="hr-line">
+                  <li><a class="green-navBar" id="blogLink" href="blog.html">BLOG
+                    <i class="fa fa-comments" aria-hidden="true"></i></a></li>
+                    <hr class="hr-line">
+                    <li><a class="green-navBar" id="contactLink" href="contact_us.html">CONTACT US
+                      <i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </nav>
+                </header>
 
-            <li><a class="black-link" id="homeLink" href="home.html">HOME
-            <i class="fa fa-home" aria-hidden="true"></i></a></li>
-            <hr class="hr-line">
-
-            <li><a class="black-link" id="aboutLink" href="About_us.html">ABOUT US
-            <i class="fa fa-users" aria-hidden="true"></i></a></li>
-            <hr class="hr-line">
-
-            <li><a class="black-link" id="portfolioLink" href="Portfolio.html">PORTFOLIO
-            <i class="fa fa-book" aria-hidden="true"></i></a></li>
-            <hr class="hr-line">
-
-            <li><a class="black-link" id="blogLink" href="blog.html">BLOG
-            <i class="fa fa-comments" aria-hidden="true"></i></a></li>
-            <hr class="hr-line">
-
-            <li><a class="black-link" id="contactLink" href="contact_us.html">CONTACT US
-            <i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-          </ul>
-      </nav>
-    </header>
-
-    <section class="showcase">
-      <div class="container">
-        <div class="row">
-        <div class="col-12">
-          <div class="showcase-text">
-        <p>DESIGN IS A HOBBY</p>
-          <h2 class="showcase-main-text">RESPONSIVE LAYOUT</h2>
-          <p>Integer ut dolor eget magna congue gravida ut at arcu.
-          Vivamus maximus neque quis luctus tempus. Vestibulum consequat.<br></p>
-        </div>
-        <button type="button" class="green-button" style="margin-left:-30px" name="button">Discover</button>
-       </p>
-       </div>
-      </div>
-      </div>
-     </section>
+                <section class="showcase">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="showcase-text">
+                          <p>DESIGN IS A HOBBY</p>
+                          <h2 class="showcase-main-text">RESPONSIVE LAYOUT</h2>
+                          <p>Integer ut dolor eget magna congue gravida ut at arcu.
+                            Vivamus maximus neque quis luctus tempus. Vestibulum consequat.
+                            Viverra sit amet ultricies
+                          </p>
+                          </div>
+                          <button type="button" class="green-button" name="button">Discover</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
 
      <div class="upBtn">
        <button id="toTopBtn" onclick="backToTop" class="to-up-btn" type="button">
@@ -61,41 +58,41 @@
        </button>
      </div>
 
-      <section class="services">
-        <div class="container">
-        <div class="row">
-          <div class="col-12">
-           <h2 class="title">WHAT WE DO</h2>
-            <h2 class="title">_______</h2>
+     <section class="services">
+       <div class="container">
+         <div class="row">
+           <div class="col-12">
+             <h2 class="title">WHAT WE DO</h2>
+             <h2 class="title">_______</h2>
+           </div>
          </div>
-       </div>
-      <div class="row">
-        <div class="col-3 services-box">
-          <div class="box">
-          <img src="img/first-service-main.png" alt="pencil-icon">
-          <h3>Easy Customizations</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Vivamus mi augue, viverra sit amet ultricies</p>
-        </div>
-      </div>
+         <div class="row">
+           <div class="col-3 services-box">
+             <div class="box">
+               <img src="img/first-service-main.png" alt="pencil-icon">
+               <h3>Easy Customizations</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                 Vivamus mi augue, viverra sit amet ultricies</p>
+               </div>
+             </div>
 
-        <div class="col-3 services-box">
-          <div class="box">
-          <img src="img/second-service-main.png" alt="lightbulb-icon">
-          <h3>Creative Ideas</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             Vivamus mi augue, viverra sit amet ultricies</p>
-        </div>
-      </div>
+             <div class="col-3 services-box">
+               <div class="box">
+                 <img src="img/second-service-main.png" alt="lightbulb-icon">
+                 <h3>Creative Ideas</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                   Vivamus mi augue, viverra sit amet ultricies</p>
+                 </div>
+               </div>
 
-        <div class="col-3 services-box">
-          <div class="box">
-          <img src="img/third-service-main.png" alt="money-icon">
-          <h3>Good Profit</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             Vivamus mi augue, viverra sit amet ultricies</p>
-        </div>
-      </div>
+               <div class="col-3 services-box">
+                 <div class="box">
+                   <img src="img/third-service-main.png" alt="money-icon">
+                   <h3>Good Profit</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Vivamus mi augue, viverra sit amet ultricies</p>
+                   </div>
+                 </div>
 
         <div class="col-3 services-box">
           <div class="box">
@@ -112,147 +109,147 @@
 
       <section class="offers">
         <div class="container">
-        <div class="row">
-          <div class="col-6 offersText">
-        <div class="offers-text">
-        <h2>New offers just arrived,<br>
-        Get it now and take profit.
-       </h2>
-            <p>Lorem ipsum dolor sit amet, quis simul signiferumque et nam,
-              qui no causae conceptam accommodare, diceret feugiat voluptaria an qui.
-              Id his quot mucius incorrupte, ut eum simul aeterno mnesarchum,
-              eu assum deseruisse contentiones sea.
-              <br> <br>
-              Ei dolor aeterno aliquam vix, stet adipiscing ne vel.
-              Nobis intellegat te vim, ut eum imperdiet prodesset abhorreant,
-              duo graeci admodum ea.</p>
-           </div>
-        </div>
-          <div class="col-6 offersPictures">
-           <div class="offers-pictures">
-            <img src="img/what-we-do-right-image.png" alt="food-pictures">
+          <div class="row">
+            <div class="col-6 offersText">
+              <div class="offers-text">
+                <h2>New offers just arrived,<br>
+                  Get it now and take profit.
+                </h2>
+                <p>Lorem ipsum dolor sit amet, quis simul signiferumque et nam,
+                  qui no causae conceptam accommodare, diceret feugiat voluptaria an qui.
+                  Id his quot mucius incorrupte, ut eum simul aeterno mnesarchum,
+                  eu assum deseruisse contentiones sea.
+                  <br> <br>
+                  Ei dolor aeterno aliquam vix, stet adipiscing ne vel.
+                  Nobis intellegat te vim, ut eum imperdiet prodesset abhorreant,
+                  duo graeci admodum ea.</p>
+                </div>
+              </div>
+              <div class="col-6 offersPictures">
+                <div class="offers-pictures">
+                  <img src="img/what-we-do-right-image.png" alt="food-pictures">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 offfersButtons">
+                <div class="offers-buttons">
+                  <button type="button" class="white-button" name="discover-more">DISCOVER MORE</button>
+                  <button type="button" class="green-button" name="purchase-more">PURCHASE MORE</button>
+                </div>
+              </div>
+            </div>
           </div>
-         </div>
+        </section>
+
+
+    <section class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="title">OUR PORTFOLIO</h2>
+            <h2 class="title">________</h2>
+          </div>
         </div>
         <div class="row">
-          <div class="col-6 offfersButtons">
-            <div class="offers-buttons">
-              <button type="button" class="white-button" name="discover-more">DISCOVER MORE</button>
-              <button type="button" class="green-button" name="purchase-more">PURCHASE MORE</button>
+          <div class="col-12 portfolio-btns">
+            <a href="#" class="portfolio-button Active" name="all-button">All</a>
+            <a href="#" class="portfolio-button" name="nature-button">Nature</a>
+            <a href="#" class="portfolio-button" name="workspace-button">Workspace</a>
+            <a href="#" class="portfolio-button" name="city-bbutton">City</a>
+            <a href="#" class="portfolio-button" name="tech-button">Technology</a>
+          </div>
+        </div>
+        <div class="row portfolio-pictures">
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_01.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_02.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_03.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_04.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row portfolio-pictures">
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_05.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_06.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_07.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-3 imgBox">
+            <div class="box">
+              <img src="img/portfolio_08.jpg" alt="">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-      <section class="portfolio">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-        <h2 class="title">OUR PORTFOLIO</h2>
-        <h2 class="title">________</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 portfolio-btns">
-        <a href="#" class="portfolio-button Active" name="all-button">All</a>
-        <a href="#" class="portfolio-button" name="nature-button">Nature</a>
-        <a href="#" class="portfolio-button" name="workspace-button">Workspace</a>
-        <a href="#" class="portfolio-button" name="city-bbutton">City</a>
-        <a href="#" class="portfolio-button" name="tech-button">Technology</a>
-        </div>
-      </div>
-      <div class="row portfolio-pictures">
-        <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_01.jpg" alt="">
-        </div>
-      </div>
-      <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_02.jpg" alt="">
-        </div>
-      </div>
-        <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_03.jpg" alt="">
-        </div>
-      </div>
-        <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_04.jpg" alt="">
-        </div>
-      </div>
-    </div>
-      <div class="row portfolio-pictures">
-        <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_05.jpg" alt="">
-        </div>
-      </div>
-        <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_06.jpg" alt="">
-        </div>
-      </div>
-        <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_07.jpg" alt="">
-        </div>
-      </div>
-        <div class="col-3 imgBox">
-        <div class="box">
-          <img src="img/portfolio_08.jpg" alt="">
-          </div>
-          </div>
-         </div>
-        </div>
-      </section>
-
       <section class="blog">
         <div class="container">
           <div class="row">
             <div class="col-12">
-            <h2 class="title">OUR BLOG POSTS</h2>
-            <h2 class="title">________</h2>
-          </div>
-        </div>
-        <div class="row blog-pictures">
-          <div class="col-6 lgBox">
-         <div class="lg-box">
-             <img src="img/blog_01.jpg" alt="">
-             <div class="lg-box-text">
-           <h4>Delecioius Food Served</h4>
-           <p>Posted: <strong>George</strong> / Date:
-             <strong>11 Aug 2017</strong>/ Category:
-             <strong>Design</strong></p>
+              <h2 class="title">OUR BLOG POSTS</h2>
+              <h2 class="title">________</h2>
             </div>
+          </div>
+          <div class="row blog-pictures">
+            <div class="col-6 lgBox">
+              <div class="lg-box">
+                <img src="img/blog_01.jpg" alt="">
+                <div class="lg-box-text">
+                  <h4>Delecioius Food Served</h4>
+                  <p>Posted: <strong>George</strong> / Date:
+                    <strong>11 Aug 2017</strong>/ Category:
+                    <strong>Design</strong></p>
+                  </div>
+                </div>
               </div>
-         </div>
-         <div class="col-6 smBox">
-         <div class="sm-box1">
-           <img src="img/blog_02.jpg" alt="">
-           <div class="sm-box-text">
-           <h4>Creative & Clean Workspace</h4>
-           <p>Posted: <strong>Kerley</strong> / Date:
-             <strong>24 Jul 2017</strong> / Category:
-             <strong>Artwork</strong></p>
-           </div>
-         </div>
-         <div class="sm-box2">
-           <img src="img/blog_03.jpg" alt="">
-           <div class="sm-box-text">
-           <h4>Crashed Plane Captured</h4>
-           <p>Posted: <strong>Johnny</strong> / Date:
-             <strong>16 Jul 2017</strong> / Category:
-             <strong>Branding</strong></p>
-             </div>
+              <div class="col-6 smBox">
+                <div class="sm-box1">
+                  <img src="img/blog_02.jpg" alt="">
+                  <div class="sm-box-text">
+                    <h4>Creative & Clean Workspace</h4>
+                    <p>Posted: <strong>Kerley</strong> / Date:
+                      <strong>24 Jul 2017</strong> / Category:
+                      <strong>Artwork</strong></p>
+                    </div>
+                  </div>
+                  <div class="sm-box2">
+                    <img src="img/blog_03.jpg" alt="">
+                    <div class="sm-box-text">
+                      <h4>Crashed Plane Captured</h4>
+                      <p>Posted: <strong>Johnny</strong> / Date:
+                        <strong>16 Jul 2017</strong> / Category:
+                        <strong>Branding</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-         </div>
-         </div>
-         </div>
-      </section>
+            </section>
 
       <section class="grey-blocks">
         <div class="container">
