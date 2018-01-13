@@ -37,8 +37,9 @@ body{
   display: inline-block;
   color: #000;
   text-align: center;
-  padding: 12px 10px;
+  padding: 12px;
   text-decoration: none;
+  transition-duration: .4s;
 }
 
 .nav-bar li .green-navBar:hover{
@@ -54,7 +55,11 @@ textarea {
   display: none;
   float: right;
   cursor: pointer;
-  /*transition-duration: 0.4s*/
+  color: #000;
+  transition-duration: 0.2s
+}
+#menu:hover{
+  color: #61a244;
 }
 
 .green-button{
@@ -139,6 +144,44 @@ textarea {
     box-shadow:0px 0px 10px #b3b3b3;
 }
 
+
+.services .box.first{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+.services .box.second{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+.services .box.thrid{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+.services .box.fourth{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+
+@keyframes servicesBox {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .offers{
   background:url(../img/what-we-do-bg.png)no-repeat;
   overflow: hidden;
@@ -159,15 +202,18 @@ textarea {
   line-height: 30px
 }
 
-.offers .offers-pictures{
-  padding-left: 20%;
-  margin-right: 20%;
+.offers .offers-pictures img{
+  width: 95%;
+  position: relative;
+  animation-name: test;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-out;
 }
 
-.offers .offers-pictures img{
-  width: 150%;
-  height: auto;
-  margin-left: -70px;
+@keyframes test {
+  0% {left: 1000px;}
+  100% {left: 0;}
 }
 
 .offers .offers-buttons{
@@ -216,6 +262,10 @@ textarea {
   position: relative;
   margin-top: -50px;
   margin-right: 20px;
+  animation-name: blogLgImg;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-out;
 }
 
 .blog .lg-box img{
@@ -257,11 +307,19 @@ textarea {
   position: relative;
   margin-top: 4%;
   margin-bottom: 5%;
+  animation-name: blogSmImg;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease;
 }
 
 .blog .sm-box2{
   position: relative;
   margin-top: 20%;
+  animation-name: blogSmImg;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease;
 }
 
 .blog .sm-box-text{
@@ -274,6 +332,68 @@ textarea {
   width: 100%;
 }
 
+
+@keyframes blogSmImg {
+  0% {left: 1000px;}
+  100% {left: 0;}
+}
+
+@keyframes blogLgImg {
+  0% {right: 1000px;}
+  100% {right: 0;}
+}
+
+
+.grey-blocks .grey-box{
+  text-align: center;
+  float: none;
+  margin: auto;
+  position: relative;
+  padding:25px 50px;
+  width: 225px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow:0px 0px 10px #b3b3b3;
+}
+
+.grey-blocks .container .grey-box h3.number{
+  color:#a2cf8d;
+  font-weight: 900;
+}
+
+.grey-blocks .grey-box.first{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+.grey-blocks .grey-box.second{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+.grey-blocks .grey-box.thrid{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+.grey-blocks .grey-box.fourth{
+  opacity: 0;
+  animation-name: servicesBox;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+}
+
+
 .contact-us{
   background:url(../img/contact-bg.png)no-repeat;
   width: 100%;
@@ -284,10 +404,14 @@ textarea {
 }
 
 .contact-us .contact-us-map img{
+  position: relative;
   width: 600px;
   padding-left: 30px;
   padding-right: 80px;
   margin-top: 20px;
+  animation-name: bringUp;
+  animation-duration: 2s;
+  transition-timing-function: ease;
 }
 .contact-us form input[type = text]{
 margin-top: 65px;
@@ -325,22 +449,18 @@ margin-top: 65px;
   margin-bottom: 80px;
 }
 
-.grey-blocks .grey-box{
-  text-align: center;
-  float: none;
-  margin: auto;
-  padding:25px 50px;
-  width: 225px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  box-shadow:0px 0px 10px #b3b3b3;
+.contact-us-form{
+  position: relative;
+  animation-name: bringUp;
+  animation-duration: 2s;
+  transition-timing-function: ease;
 }
 
-.grey-blocks .container .grey-box h3.number{
-  color:#a2cf8d;
-  font-weight: 900;
-}
+@keyframes bringUp {
+  0% {top: 500px;}
+  100% {top: 0;}
 
+  }
 .foot{
   background-color:#000;
   color: #ffffff;
@@ -467,7 +587,6 @@ margin-top: 65px;
       width: 100%;
       margin: 0;
       padding: 0;
-      /*position: relative;*/
     }
 
     .nav-bar ul li{
@@ -539,18 +658,13 @@ margin-top: 65px;
     width: 100%;
   }
 
-  .offers{
-    background:url(../img/what-we-do-bg.png)no-repeat;
-    background-size: cover;
-    height: 45%;
-  }
   .offers-buttons[type = button]{
     margin: 10% 0;
   }
 
   .offers .offers-pictures img{
-    width: 110%;
-    margin-left: -5%;
+    width: 80%;
+    margin-left: 10%;
   }
 
   .col-3.imgBox{
@@ -582,7 +696,7 @@ margin-top: 65px;
 
   .foot .footerText{
     text-align: center;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
   }
 
   .foot .social-icons{
@@ -615,11 +729,6 @@ margin-top: 65px;
     margin-left: .5%;
     margin-bottom: -10%;
     overflow: hidden;
-  }
-
-  .offers .offers-pictures img{
-    width: 120%;
-    margin-left: -10%;
   }
 
   .portfolio .portfolio-pictures img{
