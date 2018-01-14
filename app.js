@@ -1,58 +1,78 @@
 // Javascript for media 101 project
 
-//function for dropdown menu
+//******* VARIABLES *****************
 
+// navbar links ids
+const home = document.getElementById('homeLink');
+const about = document.getElementById("aboutLink");
+const offers = document.getElementById('offersLink');
+const portfolio = document.getElementById('portfolioLink');
+const blog = document.getElementById('blogLink');
+const contactUs = document.getElementById('contactLink');
+
+// html section ids
+const showcaseSection = document.getElementById('showcaseJs');
+const aboutSection = document.getElementById('servicesJs');
+const offersSection = document.getElementById('offersJs');
+const portfolioSection = document.getElementById('portfolioJs');
+const blogSection = document.getElementById('blogJs');
+const contactUsSection = document.getElementById('contact-usJs');
+
+//navbar
+const navbar = document.getElementById('fullNavbar');
+// navbar ul
+const navLinks = document.getElementById('dropDownMenu');
+
+
+
+//function for dropdown menu
 function dropdownClick() {
-    let x = document.getElementById('dropDownMenu');
-    if (x.className === 'navBar') {
-        x.className += ' responsiveNavbar';
+    if (navLinks.className === 'navBar') {
+        navLinks.className += ' responsiveNavbar';
     }
     else {
-      x.className = 'navBar';
+      navLinks.className = 'navBar';
     }
 }
 
-// scroll to nav links
-// function scrollToAbout() {
-//     let aboutSection = document.getElementById('servicesJs');
-//     aboutSection.scrollIntoView();
-//     prevent.default();
-// }
+// function for navbar link to scroll to section
+   //   NEED TO FIX NAVBAR REQUIRING 2 CLICKS
+navLinks.addEventListener('click', function scrollToSection(goto) {
+    let link = goto.target;
 
-function scrollToSection() {
-  // nav ids
-  let home = document.getElementById('homeLink');
-  let about = document.getElementById("aboutLink");
-  let offers = document.getElementById('offersLink');
-  let portfolio = document.getElementById('portfolioLink');
-  let blog = document.getElementById('blogLink');
-  let contactUs = document.getElementById('contactLink');
+      if (link == home) {
+        showcaseSection.scrollIntoView();
+        navLinks.className -= ' responsiveNavbar';
+      }
+      else if (link == about ) {
+        aboutSection.scrollIntoView();
+        navLinks.className -= 'responsiveNavbar';
+      }
+      else if (link == offers) {
+         offersSection.scrollIntoView();
+         navLinks.className -= ' responsiveNavbar';
+      }
+      else if (link == portfolio) {
+         portfolioSection.scrollIntoView();
+         navLinks.className -= ' responsiveNavbar';
+      }
+      else if (link == blog) {
+         blogSection.scrollIntoView();
+         navLinks.className -= ' responsiveNavbar';
+      }
+      else{
+         contactUsSection.scrollIntoView();
+         navLinks.className -= ' responsiveNavbar';
+      }
+  });
 
-  //nav sections
-  let showcaseSection = document.getElementById('showcaseJs');
-  let aboutSection = document.getElementById('servicesJs');
-  let offersSection = document.getElementById('offersJs');
-  let portfolioSection = document.getElementById('portfolioJs');
-  let blogSection = document.getElementById('blogJs');
-  let contactUsSection = document.getElementById("contact-usJs");
+//Change navbar color on scroll
+  window.onscroll = function() {navbarColor()};
 
-  if (about) {
-     aboutSection.scrollIntoView();
+  function navbarColor() {
+    if (document.documentElement.scrollTop > 50) {
+      navbar.style.background = "black";
+    }
+    else {
+    }
   }
-  else if (home) {
-    showcaseSection.scrollIntoView();
-  }
-  else if (offers) {
-    offersSection.scrollIntoView();
-  }
-  else if (portfolio) {
-    portfolioSection.scrollIntoView();
-  }
-  else if (blog) {
-    blogSection.scrollIntoView();
-  }
-  else if (contactUs) {
-    contactUsSection.scrollIntoView();
-  }
-
-}
