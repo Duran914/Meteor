@@ -17,6 +17,9 @@ body{
 .nav-bar{
   overflow: hidden;
   background-color: #a2cf8d;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 .nav-bar ul{
@@ -38,6 +41,7 @@ body{
   color: #000;
   text-align: center;
   padding: 12px;
+  cursor: pointer;
   text-decoration: none;
   transition-duration: .4s;
 }
@@ -344,7 +348,7 @@ textarea {
 }
 
 
-.grey-blocks .grey-box{
+.statistics .grey-box{
   text-align: center;
   float: none;
   margin: auto;
@@ -356,19 +360,19 @@ textarea {
   box-shadow:0px 0px 10px #b3b3b3;
 }
 
-.grey-blocks .container .grey-box h3.number{
+.statistics .container .grey-box h3.number{
   color:#a2cf8d;
   font-weight: 900;
 }
 
-.grey-blocks .grey-box.first{
+.statistics .grey-box.first{
   opacity: 0;
   animation-name: servicesBox;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   transition-property: transform;
 }
-.grey-blocks .grey-box.second{
+.statistics .grey-box.second{
   opacity: 0;
   animation-name: servicesBox;
   animation-duration: 2s;
@@ -376,7 +380,7 @@ textarea {
   animation-fill-mode: forwards;
   transition-property: transform;
 }
-.grey-blocks .grey-box.thrid{
+.statistics .grey-box.thrid{
   opacity: 0;
   animation-name: servicesBox;
   animation-duration: 2s;
@@ -384,7 +388,7 @@ textarea {
   animation-fill-mode: forwards;
   transition-property: transform;
 }
-.grey-blocks .grey-box.fourth{
+.statistics .grey-box.fourth{
   opacity: 0;
   animation-name: servicesBox;
   animation-duration: 2s;
@@ -444,7 +448,7 @@ margin-top: 65px;
   color:#808080;
 }
 
-.grey-blocks .container{
+.statistics .container{
   margin-top: 60px;
   margin-bottom: 80px;
 }
@@ -544,7 +548,7 @@ margin-top: 65px;
       padding: 5px 0 6px 0;
     }
 
-    .grey-blocks .grey-box{
+    .statistics .grey-box{
       text-align: center;
       margin-bottom: 10%;
       width: 90%;
@@ -644,7 +648,7 @@ margin-top: 65px;
   .blog .sm-box2 p{
     padding: 0;
   }
-  .grey-blocks .grey-box{
+  .statistics .grey-box{
     margin-left: 5%;
     width: 90%;
   }
