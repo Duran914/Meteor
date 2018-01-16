@@ -613,6 +613,9 @@ margin-top: 65px;
     display: block;
     text-align: center;
   }
+  .showcase-text{
+    padding-top: 40px;
+  }
 
   .col-3.services-box{
     width: 100%;
