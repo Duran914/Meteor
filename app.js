@@ -44,33 +44,32 @@ function dropdownClick() {
 }
 
 // function for navbar link to scroll to section
-   //   NEED TO FIX NAVBAR REQUIRING 2 CLICKS
 navbarUl.addEventListener('click', function scrollToSection(goto) {
     let link = goto.target;
 
       if (link == home) {
         showcaseSection.scrollIntoView();
-        navbarUl.className -= ' responsiveNavbar';
+        navbarUl.setAttribute('class', 'navBar');
       }
       else if (link == about ) {
         aboutSection.scrollIntoView();
-        navbarUl.className -= 'responsiveNavbar';
+        navbarUl.setAttribute('class', 'navBar');
       }
       else if (link == offers) {
          offersSection.scrollIntoView();
-         navbarUl.className -= ' responsiveNavbar';
+         navbarUl.setAttribute('class', 'navBar');
       }
       else if (link == portfolio) {
          portfolioSection.scrollIntoView();
-         navbarUl.className -= ' responsiveNavbar';
+         navbarUl.setAttribute('class', 'navBar');
       }
       else if (link == blog) {
          blogSection.scrollIntoView();
-         navbarUl.className -= ' responsiveNavbar';
+         navbarUl.setAttribute('class', 'navBar');
       }
       else{
          contactUsSection.scrollIntoView();
-         navbarUl.className -= ' responsiveNavbar';
+         navbarUl.setAttribute('class', 'navBar');
       }
   });
 
@@ -78,7 +77,8 @@ navbarUl.addEventListener('click', function scrollToSection(goto) {
   window.onscroll = function() {navbarColor()};
 
   function navbarColor() {
-    if (document.documentElement.scrollTop > 450) {
+
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
       navbar.style.background = '#000';
        hamburgerFaIcon.style.color = '#a2cf8d';
         meteorLogo.setAttribute('src', 'img/white_logo.png')

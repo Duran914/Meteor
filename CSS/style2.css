@@ -7,6 +7,9 @@ body{
   padding:0;
   font-family:'Montserrat','Inconsolata';
 }
+section{
+  padding: 40px 0;
+}
 
 .hr-line{
   border-color:  #61a244;
@@ -224,7 +227,9 @@ textarea {
   margin-left: 50px;
   margin-top: -30px;
 }
-
+.portfolio{
+  background-size: cover;
+}
 .portfolio .portfolio-btns{
   text-align: center;
 }
@@ -400,6 +405,7 @@ textarea {
 
 .contact-us{
   background:url(../img/contact-bg.png)no-repeat;
+  background-size: cover;
   width: 100%;
 }
 
@@ -553,9 +559,7 @@ margin-top: 65px;
       margin-bottom: 10%;
       width: 90%;
     }
-   .contact-us{
-     background-size: cover;
-   }
+
     .col-6.contactUs{
       width: 100%;
       text-align: center;
