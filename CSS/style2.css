@@ -257,6 +257,7 @@ textarea {
   text-decoration: none;
   color: #000000;
   padding: 20px;
+  cursor: pointer;
 }
 
 .portfolio-button.Active{

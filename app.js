@@ -19,7 +19,7 @@ const contactUs = document.getElementById('contactLink');
 
 //nav bar hamburger menu
 const hamburgerFaIcon = document.querySelector('#menu');
-console.log(hamburgerFaIcon);
+
 // site logo
 const meteorLogo = document.querySelector('.logo img');
 
@@ -65,26 +65,32 @@ function dropdownClick() {
       if (link == home) {
         showcaseSection.scrollIntoView();
         navbarUl.setAttribute('class', 'navBar');
+        hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == about ) {
         aboutSection.scrollIntoView();
         navbarUl.setAttribute('class', 'navBar');
+        hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == offers) {
          offersSection.scrollIntoView();
          navbarUl.setAttribute('class', 'navBar');
+         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == portfolio) {
          portfolioSection.scrollIntoView();
          navbarUl.setAttribute('class', 'navBar');
+         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == blog) {
          blogSection.scrollIntoView();
          navbarUl.setAttribute('class', 'navBar');
+         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else{
          contactUsSection.scrollIntoView();
          navbarUl.setAttribute('class', 'navBar');
+         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
   });
 
@@ -151,3 +157,86 @@ function dropdownClick() {
     servicesBox4.addEventListener('mouseleave', function() {
        servicesBox4Img.setAttribute('src', 'img/fourth-service-main.png');
     });
+
+// Remove/add portfolio pictures
+  // portfolio <a>
+
+  //const portAll = document.querySelector('')
+    // const portNature = document.querySelector('#portfolioNature');
+    // const portWorkspace = document.querySelector('#portfolioWorkspace');
+    const portfolioButtons = document.querySelector('.portfolio-btns')
+        const landscape = portfolioButtons.children[1];
+        const workspace = portfolioButtons.children[2];
+        const technology = portfolioButtons.children[3];
+    const portfolioPictures = document.querySelector('.portfolio-pictures');
+  //  const portWorkspace = document.querySelector('#portfolioWorkspace');
+
+  //portfolio pictures
+  const reChairImg = document.querySelector('.red-chair-desk');
+  const studyingImg = document.querySelector('.study');
+  const macHeadphoneImg = document.querySelector('.mac-headphones');
+  const cityView = document.querySelector('.city-view');
+  const snowMtn = document.querySelector('.snow-mt');
+  const lightStrom = document.querySelector('.light-stormtrooper');
+  const livingRoom = document.querySelector('.living-room');
+  const redheadGirl = document.querySelector('.redhead-girl');
+
+  // const test = document.querySelectorAll('.portfolio-button:first-child');
+    //
+    // portfolioButtons.addEventListener('click',function portfolio(click) {
+    //   let pick = click.target
+    //
+    //     // Landscape button
+    //     if (pick == portfolioButtons.children[1]) {
+    //         portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
+    //         portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+    //         portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
+    //         portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+    //         reChairImg.remove();
+    //         studyingImg.remove();
+    //         macHeadphoneImg.remove();
+    //         lightStrom.remove();
+    //         livingRoom.remove();
+    //         redheadGirl.remove();
+    //
+    //     }
+    //     // Workspace button
+    //     else if (pick == portfolioButtons.children[2]) {
+    //         portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
+    //         portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+    //         portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+    //         portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
+    //         snowMtn.remove();
+    //         cityView.remove();
+    //         lightStrom.remove();
+    //         macHeadphoneImg.remove();
+    //     }
+    // });
+
+    landscape.addEventListener('click', function() {
+      portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
+      portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+      reChairImg.remove();
+      studyingImg.remove();
+      macHeadphoneImg.remove();
+      lightStrom.remove();
+      livingRoom.remove();
+      redheadGirl.remove();
+    });
+
+    workspace.addEventListener('click', function() {
+      portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
+      portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
+      snowMtn.remove();
+      cityView.remove();
+      lightStrom.remove();
+      macHeadphoneImg.remove();
+    });
+
+    // const test  = document.querySelectorAll('.portfolio-pictures:nth-child(2');
+
+   console.log(landscape);
