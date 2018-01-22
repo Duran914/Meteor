@@ -11,11 +11,11 @@ const navbarUlLinks = document.querySelectorAll('a.green-navBar');
 
 // navbar individuallinks ids
 const home = document.getElementById('homeLink');
-const about = document.getElementById("aboutLink");
-const offers = document.getElementById('offersLink');
-const portfolio = document.getElementById('portfolioLink');
-const blog = document.getElementById('blogLink');
-const contactUs = document.getElementById('contactLink');
+ const about = document.getElementById("aboutLink");
+  const offers = document.getElementById('offersLink');
+   const portfolio = document.getElementById('portfolioLink');
+    const blog = document.getElementById('blogLink');
+     const contactUs = document.getElementById('contactLink');
 
 //nav bar hamburger menu
 const hamburgerFaIcon = document.querySelector('#menu');
@@ -26,15 +26,15 @@ const meteorLogo = document.querySelector('.logo img');
 
 // html section ids
 const showcaseSection = document.getElementById('showcaseJs');
-const aboutSection = document.getElementById('servicesJs');
-const offersSection = document.getElementById('offersJs');
-const portfolioSection = document.getElementById('portfolioJs');
-const blogSection = document.getElementById('blogJs');
-const contactUsSection = document.getElementById('contact-usJs');
+ const aboutSection = document.getElementById('servicesJs');
+  const offersSection = document.getElementById('offersJs');
+   const portfolioSection = document.getElementById('portfolioJs');
+    const blogSection = document.getElementById('blogJs');
+     const contactUsSection = document.getElementById('contact-usJs');
 
 //services(about us) boxs
 const servicesBox1 = document.querySelector('.box.first');
-  const servicesBox1Img = servicesBox1.firstElementChild;
+ const servicesBox1Img = servicesBox1.firstElementChild;
 
 const servicesBox2 = document.querySelector('.box.second');
   const servicesBox2Img = servicesBox2.firstElementChild;
@@ -50,7 +50,7 @@ const servicesBox4 = document.querySelector('.box.fourth');
 function dropdownClick() {
     if (navbarUl.className === 'navBar') {
         navbarUl.className += ' responsiveNavbar';
-        hamburgerFaIcon.setAttribute('class', 'fa fa-times fa-2x');
+         hamburgerFaIcon.setAttribute('class', 'fa fa-times fa-2x');
     }
     else {
       navbarUl.className = 'navBar';
@@ -64,33 +64,33 @@ function dropdownClick() {
 
       if (link == home) {
         showcaseSection.scrollIntoView();
-        navbarUl.setAttribute('class', 'navBar');
-        hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
+         navbarUl.setAttribute('class', 'navBar');
+          hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == about ) {
         aboutSection.scrollIntoView();
-        navbarUl.setAttribute('class', 'navBar');
-        hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
+         navbarUl.setAttribute('class', 'navBar');
+          hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == offers) {
          offersSection.scrollIntoView();
-         navbarUl.setAttribute('class', 'navBar');
-         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
+          navbarUl.setAttribute('class', 'navBar');
+           hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == portfolio) {
          portfolioSection.scrollIntoView();
-         navbarUl.setAttribute('class', 'navBar');
-         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
+          navbarUl.setAttribute('class', 'navBar');
+           hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == blog) {
          blogSection.scrollIntoView();
-         navbarUl.setAttribute('class', 'navBar');
-         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
+          navbarUl.setAttribute('class', 'navBar');
+           hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else{
          contactUsSection.scrollIntoView();
-         navbarUl.setAttribute('class', 'navBar');
-         hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
+          navbarUl.setAttribute('class', 'navBar');
+           hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
   });
 
@@ -159,112 +159,79 @@ function dropdownClick() {
     });
 
 // Remove/add portfolio pictures
-  // portfolio <a>
 
-  //const portAll = document.querySelector('')
-    // const portNature = document.querySelector('#portfolioNature');
-    // const portWorkspace = document.querySelector('#portfolioWorkspace');
-    const portfolioButtons = document.querySelector('.portfolio-btns')
-        const landscape = portfolioButtons.children[1];
-        const workspace = portfolioButtons.children[2];
-        const technology = portfolioButtons.children[3];
-    const portfolioPictures = document.querySelector('.portfolio-pictures');
-  //  const portWorkspace = document.querySelector('#portfolioWorkspace');
+const portfolioButtons = document.querySelector('.portfolio-btns')
+ const landscape = portfolioButtons.children[1];
+  const workspace = portfolioButtons.children[2];
+   const technology = portfolioButtons.children[3];
 
   //portfolio pictures
 const workspaceImgs = document.querySelectorAll('.workspace');
-const landscapeImgs = document.querySelectorAll('.landscape');
-const technologyImgs = document.querySelectorAll('.technology');
-const allImgs = document.querySelectorAll('.imgBox');
-
-console.log(technologyImgs);
-  // const test = document.querySelectorAll('.portfolio-button:first-child');
-    //
-    // portfolioButtons.addEventListener('click',function portfolio(click) {
-    //   let pick = click.target
-    //
-    //     // Landscape button
-    //     if (pick == portfolioButtons.children[1]) {
-    //         portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
-    //         portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-    //         portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
-    //         portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-    //         reChairImg.remove();
-    //         studyingImg.remove();
-    //         macHeadphoneImg.remove();
-    //         lightStrom.remove();
-    //         livingRoom.remove();
-    //         redheadGirl.remove();
-    //
-    //     }
-    //     // Workspace button
-    //     else if (pick == portfolioButtons.children[2]) {
-    //         portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
-    //         portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-    //         portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-    //         portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
-    //         snowMtn.remove();
-    //         cityView.remove();
-    //         lightStrom.remove();
-    //         macHeadphoneImg.remove();
-    //     }
-    // });
-
-    // landscape.addEventListener('click', function() {
-    //
-    //   portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
-    //   portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-    //   portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
-    //   portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-    //     if (workspaceImgs.className == 'workspace') {
-    //         workspaceImgs.className += ' hide';
-    //     }
-    //     else {
-    //       workspaceImgs.className == 'workspace';
-    //     }
-    // });
-    //
-    // workspace.addEventListener('click', function() {
-    //   portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
-    //   portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-    //   portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-    //   portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
-    //
-    // });
-
-    function landscapeBtn() {
-      workspaceImgs.forEach(function(img){
-      //  img.setAttribute('class', 'hide');
-      if (workspaceImgs.className === 'workspace') {
-          workspaceImgs.className += ' hide';
-      }
-      else {
-        workspaceImgs.className = 'workspace';
-      }
-     });
-
-    //  technologyImgs.forEach(function(img){
-    //   img.setAttribute('class', 'hide');
-    // });
-          // if (workspaceImgs.className == 'workspace') {
-          //     workspaceImgs.className += ' hide';
-          // }
-          // else {
-          //   workspaceImgs.className == 'workspace';
-          // }
+ const landscapeImgs = document.querySelectorAll('.landscape');
+  const technologyImgs = document.querySelectorAll('.technology');
+   const allImgs = document.querySelectorAll('.imgBox');
+   
+ // function for portfolio picture filter buttons
+  function allBtn() {
+    portfolioButtons.children[0].setAttribute('class', 'portfolio-button Active');
+     portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
+       portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+        landscapeImgs.forEach(function(img){
+         img.classList.remove('hide');
+       });
+         technologyImgs.forEach(function(img){
+          img.classList.remove('hide');
+        });
+          workspaceImgs.forEach(function(img){
+           img.classList.remove('hide');
+         });
     }
 
-    function technologyBtn() {
-      workspaceImgs.forEach(function(img){
-       img.classList.toggle('hide');
-     });
-     technologyImgs.forEach(function(img){
-      img.classList.toggle('show');
-    });
-          // if (workspaceImgs.className == 'workspace') {
-          //     workspaceImgs.className += ' hide';
-          // }
-          // else {
-          //   workspaceImgs.className == 'workspace';
-          // }
-    }
+  function landscapeBtn() {
+    portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
+     portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
+       portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+        landscapeImgs.forEach(function(img){
+         img.classList.remove('hide');
+       });
+         workspaceImgs.forEach(function(img){
+          img.classList.add('hide');
+        });
+          technologyImgs.forEach(function(img){
+           img.classList.add('hide');
+         });
+  }
+
+  function technologyBtn() {
+    portfolioButtons.children[3].setAttribute('class', 'portfolio-button Active');
+     portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
+       portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
+        technologyImgs.forEach(function(img){
+         img.classList.remove('hide');
+       });
+          workspaceImgs.forEach(function(img){
+           img.classList.add('hide');
+         });
+           landscapeImgs.forEach(function(img){
+            img.classList.add('hide');
+          });
+      }
+
+  function workspaceBtn() {
+    portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
+     portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+      portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
+       portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+        workspaceImgs.forEach(function(img){
+         img.classList.remove('hide');
+       });
+          technologyImgs.forEach(function(img){
+           img.classList.add('hide');
+         });
+           landscapeImgs.forEach(function(img){
+            img.classList.add('hide');
+          });
+      }
