@@ -543,6 +543,13 @@ margin-top: 65px;
   box-sizing: border-box;
 }
 
+.show {
+    display: block;
+}
+.hide{
+  display: none;
+}
+
 @media screen and (max-width:1036px) {
     .col-3.services-box,
     .col-3.greyBox{

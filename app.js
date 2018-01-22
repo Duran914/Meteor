@@ -172,15 +172,12 @@ function dropdownClick() {
   //  const portWorkspace = document.querySelector('#portfolioWorkspace');
 
   //portfolio pictures
-  const reChairImg = document.querySelector('.red-chair-desk');
-  const studyingImg = document.querySelector('.study');
-  const macHeadphoneImg = document.querySelector('.mac-headphones');
-  const cityView = document.querySelector('.city-view');
-  const snowMtn = document.querySelector('.snow-mt');
-  const lightStrom = document.querySelector('.light-stormtrooper');
-  const livingRoom = document.querySelector('.living-room');
-  const redheadGirl = document.querySelector('.redhead-girl');
+const workspaceImgs = document.querySelectorAll('.workspace');
+const landscapeImgs = document.querySelectorAll('.landscape');
+const technologyImgs = document.querySelectorAll('.technology');
+const allImgs = document.querySelectorAll('.imgBox');
 
+console.log(technologyImgs);
   // const test = document.querySelectorAll('.portfolio-button:first-child');
     //
     // portfolioButtons.addEventListener('click',function portfolio(click) {
@@ -213,30 +210,61 @@ function dropdownClick() {
     //     }
     // });
 
-    landscape.addEventListener('click', function() {
-      portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
-      portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-      reChairImg.remove();
-      studyingImg.remove();
-      macHeadphoneImg.remove();
-      lightStrom.remove();
-      livingRoom.remove();
-      redheadGirl.remove();
+    // landscape.addEventListener('click', function() {
+    //
+    //   portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
+    //   portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+    //   portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
+    //   portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+    //     if (workspaceImgs.className == 'workspace') {
+    //         workspaceImgs.className += ' hide';
+    //     }
+    //     else {
+    //       workspaceImgs.className == 'workspace';
+    //     }
+    // });
+    //
+    // workspace.addEventListener('click', function() {
+    //   portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
+    //   portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
+    //   portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
+    //   portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
+    //
+    // });
+
+    function landscapeBtn() {
+      workspaceImgs.forEach(function(img){
+      //  img.setAttribute('class', 'hide');
+      if (workspaceImgs.className === 'workspace') {
+          workspaceImgs.className += ' hide';
+      }
+      else {
+        workspaceImgs.className = 'workspace';
+      }
+     });
+
+    //  technologyImgs.forEach(function(img){
+    //   img.setAttribute('class', 'hide');
+    // });
+          // if (workspaceImgs.className == 'workspace') {
+          //     workspaceImgs.className += ' hide';
+          // }
+          // else {
+          //   workspaceImgs.className == 'workspace';
+          // }
+    }
+
+    function technologyBtn() {
+      workspaceImgs.forEach(function(img){
+       img.classList.toggle('hide');
+     });
+     technologyImgs.forEach(function(img){
+      img.classList.toggle('show');
     });
-
-    workspace.addEventListener('click', function() {
-      portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
-      portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
-      snowMtn.remove();
-      cityView.remove();
-      lightStrom.remove();
-      macHeadphoneImg.remove();
-    });
-
-    // const test  = document.querySelectorAll('.portfolio-pictures:nth-child(2');
-
-   console.log(landscape);
+          // if (workspaceImgs.className == 'workspace') {
+          //     workspaceImgs.className += ' hide';
+          // }
+          // else {
+          //   workspaceImgs.className == 'workspace';
+          // }
+    }
