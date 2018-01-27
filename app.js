@@ -45,6 +45,13 @@ const servicesBox3 = document.querySelector('.box.third');
 const servicesBox4 = document.querySelector('.box.fourth');
   const servicesBox4Img = servicesBox4.firstElementChild;
 
+//Scroll function
+  window.onscroll = function()
+  {
+    navbarColor(),
+    scrollAnimation()
+  };
+
 
 // dropdown menu
 function dropdownClick() {
@@ -95,8 +102,6 @@ function dropdownClick() {
   });
 
 //Change navbar color on scroll
-  window.onscroll = function() {navbarColor()};
-
   function navbarColor() {
 
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -106,7 +111,7 @@ function dropdownClick() {
          navbarUlLinks.forEach(function(link){
           link.style.color = '#fff';
         });
-    }
+      }
       else {
       navbar.style.background = '#a2cf8d';
        hamburgerFaIcon.style.color = '#000';
@@ -115,7 +120,7 @@ function dropdownClick() {
           link.style.color = '#000';
         });
       }
-    }
+  }
 
 // Change img of services boxes
 
@@ -170,7 +175,7 @@ const workspaceImgs = document.querySelectorAll('.workspace');
  const landscapeImgs = document.querySelectorAll('.landscape');
   const technologyImgs = document.querySelectorAll('.technology');
    const allImgs = document.querySelectorAll('.imgBox');
-   
+
  // function for portfolio picture filter buttons
   function allBtn() {
     portfolioButtons.children[0].setAttribute('class', 'portfolio-button Active');
@@ -235,3 +240,41 @@ const workspaceImgs = document.querySelectorAll('.workspace');
             img.classList.add('hide');
           });
       }
+function scrollAnimation() {
+ let offerImg = document.querySelector('.offersPicture');
+  let blogLgImg = document.querySelector('.lg-box');
+   let blogSmImgs = document.querySelectorAll('.blog-img-box');
+    let contactUsForm = document.querySelector('.contact-us-form');
+     let contactUsImg = document.querySelector('.map-img');
+      if (document.documentElement.scrollTop > 680){
+        offerImg.classList.add('animateSideInRight');
+         }
+          else {
+            offerImg.classList.remove('animateSideInRight');
+        }
+           if (document.documentElement.scrollTop > 2000){
+             blogLgImg.classList.add('animateSideInLeft');
+            }
+               else {
+                 blogLgImg.classList.remove('animateSideInLeft');
+           }
+             if (document.documentElement.scrollTop > 2000){
+               blogSmImgs.forEach(function(x){
+                x.classList.add('animateSideInRight');
+              });
+             }
+               else {
+               blogSmImgs.forEach(function(x){
+                x.classList.remove('animateSideInRight');
+               });
+              }
+                if (document.documentElement.scrollTop > 3300) {
+                  contactUsForm.classList.add('animationSlideFromBottom');
+                  contactUsImg.classList.add('animationSlideFromBottom');
+                }
+                else {
+                  contactUsForm.classList.remove('animationSlideFromBottom');
+                  contactUsImg.classList.remove('animationSlideFromBottom');
+                }
+
+            }

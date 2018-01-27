@@ -215,15 +215,6 @@ textarea {
 .offers .offers-pictures img{
   width: 95%;
   position: relative;
-  animation-name: test;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  transition-timing-function: ease-out;
-}
-
-@keyframes test {
-  0% {left: 1000px;}
-  100% {left: 0;}
 }
 
 .offers .offers-buttons{
@@ -275,15 +266,13 @@ textarea {
   position: relative;
   margin-top: -50px;
   margin-right: 20px;
-  animation-name: blogLgImg;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  transition-timing-function: ease-out;
 }
 
 .blog .lg-box img{
   width: 100%;
   margin-top: 15%;
+  position: relative;
+
 }
 .blog .lg-box h4,
 .blog .lg-box p{
@@ -320,19 +309,11 @@ textarea {
   position: relative;
   margin-top: 4%;
   margin-bottom: 5%;
-  animation-name: blogSmImg;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  transition-timing-function: ease;
 }
 
 .blog .sm-box2{
   position: relative;
   margin-top: 20%;
-  animation-name: blogSmImg;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  transition-timing-function: ease;
 }
 
 .blog .sm-box-text{
@@ -344,18 +325,6 @@ textarea {
   padding: 10px 0 10px 0;
   width: 100%;
 }
-
-
-@keyframes blogSmImg {
-  0% {left: 1000px;}
-  100% {left: 0;}
-}
-
-@keyframes blogLgImg {
-  0% {right: 1000px;}
-  100% {right: 0;}
-}
-
 
 .statistics .grey-box{
   text-align: center;
@@ -406,7 +375,6 @@ textarea {
   transition-property: transform;
 }
 
-
 .contact-us{
   background:url(../img/contact-bg.png)no-repeat;
   background-size: cover;
@@ -423,9 +391,6 @@ textarea {
   padding-left: 30px;
   padding-right: 80px;
   margin-top: 20px;
-  animation-name: bringUp;
-  animation-duration: 2s;
-  transition-timing-function: ease;
 }
 .contact-us form input[type = text]{
 margin-top: 65px;
@@ -465,16 +430,8 @@ margin-top: 65px;
 
 .contact-us-form{
   position: relative;
-  animation-name: bringUp;
-  animation-duration: 2s;
-  transition-timing-function: ease;
 }
 
-@keyframes bringUp {
-  0% {top: 500px;}
-  100% {top: 0;}
-
-  }
 .foot{
   background-color:#000;
   color: #ffffff;
@@ -548,6 +505,41 @@ margin-top: 65px;
 }
 .hide{
   display: none;
+}
+
+/***************  Animations *****************/
+.animateSideInRight{
+  animation-name: slideFromRight;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-out;
+}
+
+@keyframes slideFromRight {
+  0% {left: 1000px;}
+  100% {left: 0;}
+}
+
+.animateSideInLeft{
+  animation-name: slideFromLeft;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-out;
+}
+
+@keyframes slideFromLeft {
+  0% {right: 1000px;}
+  100% {right: 0;}
+}
+.animationSlideFromBottom{
+animation-name: SlideFromBottom;
+animation-duration: 2s;
+transition-timing-function: ease;
+}
+
+@keyframes SlideFromBottom {
+0% {top: 500px;}
+100% {top: 0;}
 }
 
 @media screen and (max-width:1036px) {
