@@ -104,7 +104,7 @@ function dropdownClick() {
 //Change navbar color on scroll
   function navbarColor() {
 
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.documentElement.scrollTop > 500) {
       navbar.style.background = '#000';
        hamburgerFaIcon.style.color = '#a2cf8d';
         meteorLogo.setAttribute('src', 'img/white_logo.png');
@@ -278,3 +278,31 @@ function scrollAnimation() {
                 }
 
             }
+
+// Form Validation
+
+function validateForm() {
+let nameError = document.querySelector('.error-name');
+let contactFormName = document.forms['contantUsForm']['fname'].value
+
+  if (contactFormName == '') {
+    nameError.innerHTML = "Please enter a name.";
+    nameError.parentElement.style.padding = '5px';
+  }
+  let emailError = document.querySelector('.error-email');
+  let contactFormEmail = document.forms['contantUsForm']['email'].value
+    if (contactFormEmail == '') {
+    emailError.innerHTML = 'Please enter an email address';
+    emailError.parentElement.style.padding = '5px';
+  }
+  let messageError = document.querySelector('.error-textarea');
+  let messageFormEmail = document.forms['contantUsForm']['message'].value
+    if (messageFormEmail == '') {
+      messageError.innerHTML = 'Please enter a message';
+      messageError.parentElement.style.padding = '5px';
+      return false;
+    }
+    contactFormName.value = '';
+    contactFormEmail.value = '';
+    messageFormEmail.value = '';
+}
