@@ -23,6 +23,7 @@ section{
   position: fixed;
   width: 100%;
   z-index: 999;
+
 }
 
 .nav-bar ul{
@@ -46,11 +47,12 @@ section{
   padding: 12px;
   cursor: pointer;
   text-decoration: none;
-  transition-duration: .4s;
+  /*transition-duration: .4s;*/
 }
 
 .nav-bar li .green-navBar:hover{
 background-color: #61a244;
+border-color:white;
 }
 
 textarea {
@@ -124,7 +126,7 @@ textarea {
   color: #ffffff;
   background:url(../img/slide_02.jpg)no-repeat;
   text-align: center;
-  padding-bottom: 10%;
+  padding-bottom: 20%;
   background-size: cover;
   /* paralax effect*/
   background-attachment: fixed;
@@ -191,6 +193,7 @@ textarea {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
+
 
 .offers{
   background:url(../img/what-we-do-bg.png)no-repeat;
@@ -260,6 +263,7 @@ textarea {
     background-size: cover;
     padding: 40px;
     color: #ffffff;
+    overflow: hidden;
 }
 
 .blog .lg-box{

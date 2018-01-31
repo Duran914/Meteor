@@ -32,20 +32,7 @@ const showcaseSection = document.getElementById('showcaseJs');
     const blogSection = document.getElementById('blogJs');
      const contactUsSection = document.getElementById('contact-usJs');
 
-//services(about us) boxs
-const servicesBox1 = document.querySelector('.box.first');
- const servicesBox1Img = servicesBox1.firstElementChild;
-
-const servicesBox2 = document.querySelector('.box.second');
-  const servicesBox2Img = servicesBox2.firstElementChild;
-
-const servicesBox3 = document.querySelector('.box.third');
-  const servicesBox3Img = servicesBox3.firstElementChild;
-
-const servicesBox4 = document.querySelector('.box.fourth');
-  const servicesBox4Img = servicesBox4.firstElementChild;
-
-//Scroll function
+//Scroll functions
   window.onscroll = function()
   {
     navbarColor(),
@@ -70,36 +57,50 @@ function dropdownClick() {
     let link = goto.target;
 
       if (link == home) {
-        showcaseSection.scrollIntoView();
+        showcaseSection.scrollIntoView(
+          {behavior: "smooth",
+            block: "start"});
          navbarUl.setAttribute('class', 'navBar');
           hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == about ) {
-        aboutSection.scrollIntoView();
+        aboutSection.scrollIntoView(
+          {behavior: "smooth",
+             block: "start"});
          navbarUl.setAttribute('class', 'navBar');
           hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
+
       }
       else if (link == offers) {
-         offersSection.scrollIntoView();
+         offersSection.scrollIntoView(
+           {behavior: "smooth",
+              block: "start"});
           navbarUl.setAttribute('class', 'navBar');
            hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == portfolio) {
-         portfolioSection.scrollIntoView();
+         portfolioSection.scrollIntoView(
+           {behavior: "smooth",
+              block: "start"});
           navbarUl.setAttribute('class', 'navBar');
            hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else if (link == blog) {
-         blogSection.scrollIntoView();
+         blogSection.scrollIntoView(
+           {behavior: "smooth",
+              block: "start"});
           navbarUl.setAttribute('class', 'navBar');
            hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
       else{
-         contactUsSection.scrollIntoView();
+         contactUsSection.scrollIntoView(
+           {behavior: "smooth",
+              block: "start"});
           navbarUl.setAttribute('class', 'navBar');
            hamburgerFaIcon.setAttribute('class', 'fa fa-bars fa-2x');
       }
   });
+
 
 //Change navbar color on scroll
   function navbarColor() {
@@ -123,9 +124,22 @@ function dropdownClick() {
   }
 
 // Change img of services boxes
+//services(about us) boxs
+const servicesBox1 = document.querySelector('.box.first');
+ const servicesBox1Img = servicesBox1.firstElementChild;
+
+const servicesBox2 = document.querySelector('.box.second');
+  const servicesBox2Img = servicesBox2.firstElementChild;
+
+const servicesBox3 = document.querySelector('.box.third');
+  const servicesBox3Img = servicesBox3.firstElementChild;
+
+const servicesBox4 = document.querySelector('.box.fourth');
+  const servicesBox4Img = servicesBox4.firstElementChild;
 
     //Box 1
     servicesBox1.addEventListener('mouseenter', function() {
+
       servicesBox1Img.setAttribute('src', 'img/first-service-white.png');
     });
 
@@ -165,10 +179,8 @@ function dropdownClick() {
 
 // Remove/add portfolio pictures
 
-const portfolioButtons = document.querySelector('.portfolio-btns')
- const landscape = portfolioButtons.children[1];
-  const workspace = portfolioButtons.children[2];
-   const technology = portfolioButtons.children[3];
+ //portfolio buttons
+const portfolioButtons = document.querySelector('.portfolio-btns').children;
 
   //portfolio pictures
 const workspaceImgs = document.querySelectorAll('.workspace');
@@ -178,68 +190,73 @@ const workspaceImgs = document.querySelectorAll('.workspace');
 
  // function for portfolio picture filter buttons
   function allBtn() {
-    portfolioButtons.children[0].setAttribute('class', 'portfolio-button Active');
-     portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
-       portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-        landscapeImgs.forEach(function(img){
-         img.classList.remove('hide');
-       });
+    for (let i = 0; i < portfolioButtons.length; i++) {
+      if (i === 0) {
+        portfolioButtons[i].classList.add('Active');
+         landscapeImgs.forEach(function(img){
+          img.classList.remove('hide')});
+      }
+      else {
+        portfolioButtons[i].setAttribute('class', 'portfolio-button');
          technologyImgs.forEach(function(img){
-          img.classList.remove('hide');
-        });
-          workspaceImgs.forEach(function(img){
-           img.classList.remove('hide');
-         });
-    }
+          img.classList.remove('hide')});
+           workspaceImgs.forEach(function(img){
+           img.classList.remove('hide')});
+        }
+     }
+  }
 
   function landscapeBtn() {
-    portfolioButtons.children[1].setAttribute('class', 'portfolio-button Active');
-     portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
-       portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-        landscapeImgs.forEach(function(img){
-         img.classList.remove('hide');
-       });
-         workspaceImgs.forEach(function(img){
-          img.classList.add('hide');
-        });
-          technologyImgs.forEach(function(img){
-           img.classList.add('hide');
-         });
+      for (let i = 0; i < portfolioButtons.length; i++) {
+        if (i === 1) {
+          portfolioButtons[i].classList.add('Active');
+           landscapeImgs.forEach(function(img){
+            img.classList.remove('hide')});
+        }
+        else {
+          portfolioButtons[i].setAttribute('class', 'portfolio-button');
+          workspaceImgs.forEach(function(img){
+           img.classList.add('hide')});
+            technologyImgs.forEach(function(img){
+             img.classList.add('hide')});
+         }
+      }
   }
 
   function technologyBtn() {
-    portfolioButtons.children[3].setAttribute('class', 'portfolio-button Active');
-     portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
-       portfolioButtons.children[2].setAttribute('class', 'portfolio-button');
-        technologyImgs.forEach(function(img){
-         img.classList.remove('hide');
-       });
-          workspaceImgs.forEach(function(img){
-           img.classList.add('hide');
-         });
-           landscapeImgs.forEach(function(img){
-            img.classList.add('hide');
-          });
+    for (let i = 0; i < portfolioButtons.length; i++) {
+      if (i === 3) {
+        portfolioButtons[i].classList.add('Active');
+         technologyImgs.forEach(function(img){
+          img.classList.remove('hide')});
       }
+      else {
+        portfolioButtons[i].setAttribute('class', 'portfolio-button');
+         workspaceImgs.forEach(function(img){
+          img.classList.add('hide')});
+           landscapeImgs.forEach(function(img){
+           img.classList.add('hide')});
+        }
+     }
+  }
 
   function workspaceBtn() {
-    portfolioButtons.children[2].setAttribute('class', 'portfolio-button Active');
-     portfolioButtons.children[0].setAttribute('class', 'portfolio-button');
-      portfolioButtons.children[1].setAttribute('class', 'portfolio-button');
-       portfolioButtons.children[3].setAttribute('class', 'portfolio-button');
-        workspaceImgs.forEach(function(img){
-         img.classList.remove('hide');
-       });
-          technologyImgs.forEach(function(img){
-           img.classList.add('hide');
-         });
-           landscapeImgs.forEach(function(img){
-            img.classList.add('hide');
-          });
+    for (let i = 0; i < portfolioButtons.length; i++) {
+      if (i === 2) {
+        portfolioButtons[i].classList.add('Active');
+         workspaceImgs.forEach(function(img){
+          img.classList.remove('hide')});
       }
+      else {
+        portfolioButtons[i].setAttribute('class', 'portfolio-button');
+         technologyImgs.forEach(function(img){
+          img.classList.add('hide')});
+           landscapeImgs.forEach(function(img){
+            img.classList.add('hide')});
+        }
+     }
+  }
+
 function scrollAnimation() {
  let offerImg = document.querySelector('.offersPicture');
   let blogLgImg = document.querySelector('.lg-box');
@@ -270,11 +287,11 @@ function scrollAnimation() {
               }
                 if (document.documentElement.scrollTop > 3300) {
                   contactUsForm.classList.add('animationSlideFromBottom');
-                  contactUsImg.classList.add('animationSlideFromBottom');
+                   contactUsImg.classList.add('animationSlideFromBottom');
                 }
                 else {
                   contactUsForm.classList.remove('animationSlideFromBottom');
-                  contactUsImg.classList.remove('animationSlideFromBottom');
+                   contactUsImg.classList.remove('animationSlideFromBottom');
                 }
 
             }
@@ -282,27 +299,28 @@ function scrollAnimation() {
 // Form Validation
 
 function validateForm() {
-let nameError = document.querySelector('.error-name');
-let contactFormName = document.forms['contantUsForm']['fname'].value
+ let nameError = document.querySelector('.error-name');
+  let contactFormName = document.forms['contantUsForm']['fname'].value
 
-  if (contactFormName == '') {
+   if (contactFormName == '') {
     nameError.innerHTML = "Please enter a name.";
-    nameError.parentElement.style.padding = '5px';
+     nameError.parentElement.style.padding = '5px';
   }
   let emailError = document.querySelector('.error-email');
-  let contactFormEmail = document.forms['contantUsForm']['email'].value
+   let contactFormEmail = document.forms['contantUsForm']['email'].value
     if (contactFormEmail == '') {
     emailError.innerHTML = 'Please enter an email address';
     emailError.parentElement.style.padding = '5px';
   }
   let messageError = document.querySelector('.error-textarea');
-  let messageFormEmail = document.forms['contantUsForm']['message'].value
-    if (messageFormEmail == '') {
-      messageError.innerHTML = 'Please enter a message';
-      messageError.parentElement.style.padding = '5px';
-      return false;
+   let messageFormEmail = document.forms['contantUsForm']['message'].value
+     if (messageFormEmail == '') {
+       messageError.innerHTML = 'Please enter a message';
+        messageError.parentElement.style.padding = '5px';
+         return false;
     }
+    // clear fields after submit
     contactFormName.value = '';
-    contactFormEmail.value = '';
-    messageFormEmail.value = '';
+     contactFormEmail.value = '';
+      messageFormEmail.value = '';
 }
