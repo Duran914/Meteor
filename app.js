@@ -105,8 +105,8 @@ function dropdownClick() {
 //Change navbar color on scroll
   function navbarColor() {
 
-    if (document.documentElement.scrollTop > 500) {
-      navbar.style.background = '#000';
+    if (document.documentElement.scrollTop > 300) {
+      navbar.style.background = '#262626';
        hamburgerFaIcon.style.color = '#a2cf8d';
         meteorLogo.setAttribute('src', 'img/white_logo.png');
          navbarUlLinks.forEach(function(link){
