@@ -23,7 +23,6 @@ const hamburgerFaIcon = document.querySelector('#menu');
 // site logo
 const meteorLogo = document.querySelector('.logo img');
 
-
 // html section ids
 const showcaseSection = document.getElementById('showcaseJs');
  const aboutSection = document.getElementById('servicesJs');
@@ -55,7 +54,7 @@ function dropdownClick() {
 //  navbar links scroll to section
   navbarUl.addEventListener('click', function scrollToSection(goto) {
     let link = goto.target;
-
+    console.log(link);
       if (link == home) {
         showcaseSection.scrollIntoView(
           {behavior: "smooth",
@@ -105,7 +104,7 @@ function dropdownClick() {
 //Change navbar color on scroll
   function navbarColor() {
 
-    if (document.documentElement.scrollTop > 300) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       navbar.style.background = '#262626';
        hamburgerFaIcon.style.color = '#a2cf8d';
         meteorLogo.setAttribute('src', 'img/white_logo.png');
@@ -263,19 +262,19 @@ function scrollAnimation() {
    let blogSmImgs = document.querySelectorAll('.blog-img-box');
     let contactUsForm = document.querySelector('.contact-us-form');
      let contactUsImg = document.querySelector('.map-img');
-      if (document.documentElement.scrollTop > 680){
+      if (document.body.scrollTop > 680 || document.documentElement.scrollTop > 680){
         offerImg.classList.add('animateSideInRight');
          }
           else {
             offerImg.classList.remove('animateSideInRight');
         }
-           if (document.documentElement.scrollTop > 2000){
+           if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000){
              blogLgImg.classList.add('animateSideInLeft');
             }
                else {
                  blogLgImg.classList.remove('animateSideInLeft');
            }
-             if (document.documentElement.scrollTop > 2000){
+             if ( document.body.scrollTop > 2000 ||document.documentElement.scrollTop > 2000){
                blogSmImgs.forEach(function(x){
                 x.classList.add('animateSideInRight');
               });
@@ -285,7 +284,7 @@ function scrollAnimation() {
                 x.classList.remove('animateSideInRight');
                });
               }
-                if (document.documentElement.scrollTop > 3300) {
+                if (document.body.scrollTop > 3300 || document.documentElement.scrollTop > 3300) {
                   contactUsForm.classList.add('animationSlideFromBottom');
                    contactUsImg.classList.add('animationSlideFromBottom');
                 }

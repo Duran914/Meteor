@@ -7,8 +7,13 @@ body{
   padding:0;
   font-family:'Montserrat','Inconsolata';
 }
+
 section{
   padding: 40px 0;
+}
+
+textarea {
+  resize: none;
 }
 
 .hr-line{
@@ -17,6 +22,7 @@ section{
   border-style: solid;
 }
 
+/* Navbar styling */
 .nav-bar{
   overflow: hidden;
   background-color: #a2cf8d;
@@ -30,11 +36,13 @@ section{
   margin: 0;
   float: right;
 }
+  /* navbar logo */
 
 .nav-bar .logo img{
   float: left;
   margin: 5px;
 }
+
 .nav-bar li{
   display: inline;
 }
@@ -54,10 +62,7 @@ background-color: #61a244;
 border-color:white;
 }
 
-textarea {
-  resize: none;
-}
-
+/* hamburger menu */
 #menu{
   margin-right: 25px;
   display: none;
@@ -70,6 +75,7 @@ textarea {
   color: #61a244;
 }
 
+  /* green btn */
 .green-button{
   background-color: #a2cf8d;
   padding: 10px 20px 10px 20px;
@@ -85,28 +91,8 @@ textarea {
   background-color:#61a244;
 }
 
-.to-up-btn{
-  display: none;
-  background-color: #a2cf8d;
-  padding: 10px;
-  border-radius: 50%;
-  color:#ffffff;
-  border:none;
-  font-size: 12px;
-  cursor: pointer;
-  box-shadow: 0 1px 10px #000;
-  transition-duration: 0.2s;
-  z-index: 99;
+/* white button */
 
-}
-.to-up-btn:hover{
-  background-color:#61a244;
-}
-
-.upBtn{
-    text-align: right;
-    margin-right: 2%;
-}
 .white-button{
   background-color: #ffffff;
   padding: 10px 20px 10px 20px;
@@ -120,7 +106,7 @@ textarea {
 .white-button:hover{
   color: #a2cf8d;
 }
-
+/* Main jumbotron */
 .showcase{
   color: #ffffff;
   background:url(../img/slide_02.jpg)no-repeat;
@@ -133,15 +119,19 @@ textarea {
   background-repeat: no-repeat;
 }
 
+/* jumbrotron heading */
 .showcase-main-text{
   font-size: 30px;
 }
 
+/* jumbrotron small heading */
 .showcase-text{
   text-align: center;
   padding: 0;
   margin: 10%;
 }
+
+/* white boxes  */
 .services .box{
     text-align: center;
     float: left;
@@ -158,42 +148,7 @@ textarea {
   color: #ffffff;
 }
 
-.services .box.first{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-
-}
-.services .box.second{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-delay: .5s;
-  animation-fill-mode: forwards;
-
-}
-.services .box.third{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-
-}
-.services .box.fourth{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-}
-@keyframes servicesBox {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-
+/* offers section */
 .offers{
   background:url(../img/what-we-do-bg.png)no-repeat;
   overflow: hidden;
@@ -205,7 +160,6 @@ textarea {
   padding:25px;
   padding-left: 10%;
 }
-
 .offers .offers-text h2{
   margin-top: -20px;
 }
@@ -223,6 +177,8 @@ textarea {
   margin-left: 50px;
   margin-top: -30px;
 }
+
+/* Portolio section */
 .portfolio{
   background-size: cover;
 }
@@ -256,7 +212,7 @@ textarea {
 .portfolio-button.Active{
   color:#a2cf8d;
 }
-
+  /* Blog section */
 .blog{
     background:url(../img/blog-bg.png)no-repeat;
     background-size: cover;
@@ -277,6 +233,7 @@ textarea {
   position: relative;
 
 }
+
 .blog .lg-box h4,
 .blog .lg-box p{
   color: #000;
@@ -284,6 +241,7 @@ textarea {
   padding-left: 10px;
   width: 100%;
 }
+
 .blog .lg-box .lg-box-text{
   text-align: justify;
   position: absolute;
@@ -328,7 +286,9 @@ textarea {
   padding: 10px 0 10px 0;
   width: 100%;
 }
+/* statistics section */
 
+    /* statistics boxes */
 .statistics .grey-box{
   text-align: center;
   float: none;
@@ -346,37 +306,7 @@ textarea {
   font-weight: 900;
 }
 
-.statistics .grey-box.first{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  transition-property: transform;
-}
-.statistics .grey-box.second{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-delay: .5s;
-  animation-fill-mode: forwards;
-  transition-property: transform;
-}
-.statistics .grey-box.thrid{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  transition-property: transform;
-}
-.statistics .grey-box.fourth{
-  opacity: 0;
-  animation-name: servicesBox;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-  transition-property: transform;
-}
+/* Contact us section */
 
 .contact-us{
   background:url(../img/contact-bg.png)no-repeat;
@@ -433,21 +363,13 @@ margin-bottom: 30px;
   color:#808080;
 }
 
-.error-message{
-  margin-bottom: 5px;
-  color:white;
-  background-color: #cc0000;
-  opacity: .6;
-  float: left;
-  /*padding: 5px;*/
-  width: 90%;
-}
 
 .statistics .container{
   margin-top: 60px;
   margin-bottom: 80px;
 }
 
+/* Footer */
 .foot{
   background-color:#000;
   color: #ffffff;
@@ -473,6 +395,17 @@ margin-bottom: 30px;
   background-color:#61a244;
 }
 
+/* Error messages style */
+.error-message{
+  margin-bottom: 5px;
+  color:white;
+  background-color: #cc0000;
+  opacity: .6;
+  float: left;
+  width: 90%;
+}
+
+/* Layout */
 .container{
   width: 100%;
   margin: auto;
@@ -497,7 +430,7 @@ margin-bottom: 30px;
   clear: both;
   content: "";
 }
-
+  /* grid */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -515,6 +448,7 @@ margin-bottom: 30px;
   box-sizing: border-box;
 }
 
+/* css for javascript. Used to show and hide elements */
 .show {
     display: block;
 }
@@ -523,6 +457,12 @@ margin-bottom: 30px;
 }
 
 /***************  Animations *****************/
+
+@keyframes servicesBox {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .animateSideInRight{
   animation-name: slideFromRight;
   animation-duration: 1.5s;
@@ -556,6 +496,8 @@ transition-timing-function: ease;
 0% {top: 500px;}
 100% {top: 0;}
 }
+
+/* MEDIA QUERIES */
 
 @media screen and (max-width:1036px) {
     .col-3.services-box,
@@ -655,7 +597,9 @@ transition-timing-function: ease;
     display: block;
     margin-top: 8px;
   }
-/* Js dropdown menu */
+
+/* Javasript dropdown menu */
+
   .navBar.responsiveNavbar{
     display: block;
     text-align: center;
