@@ -395,6 +395,15 @@ margin-bottom: 30px;
   background-color:#61a244;
 }
 
+.footer-me-pic{
+  width: 35px;
+  margin-bottom: -12px;
+}
+.my-logo-text{
+  text-decoration: none;
+  color: #ffffff;
+}
+
 /* Error messages style */
 .error-message{
   margin-bottom: 5px;
